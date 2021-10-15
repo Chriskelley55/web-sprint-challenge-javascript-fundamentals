@@ -119,7 +119,7 @@ const zooAnimals = [
   */
 
   function consume(a, b, cb){
-    (a, b);
+    return (a, b, cb);
   }
  
  

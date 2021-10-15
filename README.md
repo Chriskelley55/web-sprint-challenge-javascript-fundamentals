@@ -26,13 +26,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map converts data, returns a new array, and requires a return statement where the return is pushed into the new array. An example would be transforming an array of numbers by multiplying them all by a certain number.
+.reduce walks through the array element-by-element, at each step adding the current array value to the result from the previous step. An example would be finding the total of prices in an array of object with prices.
+.filter loops through an array and creates an array with a subset of elements from the original array. An example would be finding the cities with populations over 2 million in an array of cities w/population.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is a function passed into another function as an argument to be executed later.
+A higher order operates on other functions, either by taking them as arguments or by returning them.
+
+A callback is not necessarily itself a higher order function, but a function which receives a callback as an argument is.
 
 3. Explain what a closure is.
 
+Closure gives the ability to put functions together. Code that exists elsewhere that we can use when we need them. We can pass variables down but can't pass back. Closure happens when inner function reaches into an outer scope to grab a value or variable. 
+
 4. Describe the four principles of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+Global Binding - When the 'this' keyword is not resolved with any of the bindings, implicit, explicit or new, 'this' is bound to the window(global) object. In JS's strict mode, this will be undefined.
+Implicit Binding - 80% of cases. Occurs when dot notation is used to invoke a function, to the left of the .operator.
+New Binding - Used to create an object from the constructor function. The newly created 'this' binds to the object being created using the new keyword.
+Explicit Binding - When a function with an object is outside of the execution context of the object. Occurs when .call(), .apply(), or .bind() are used on a function.
+
+5. Why do we need super() in an extended class? 
+
+When extending a class, the super() calls the parent class constructor to access the parent’s methods and properties. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
